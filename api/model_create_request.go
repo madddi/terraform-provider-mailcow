@@ -77,6 +77,14 @@ func NewCreateIdentityProviderKeycloakRequest() *MailcowCreateRequest {
 	return &this
 }
 
+func NewCreateTransportRequest() *MailcowCreateRequest {
+	this := MailcowCreateRequest{}
+	this.payload = make(map[string]interface{})
+	this.endpoint = "/api/v1/add/transport"
+	this.ResourceName = "resourceTransport"
+	return &this
+}
+
 func (o *MailcowCreateRequest) Get(key string) interface{} {
 	if !o.Has(key) {
 		var ret bool

@@ -68,6 +68,13 @@ func NewDeleteIdentityProviderKeycloakRequest() *MailcowDeleteRequest {
 	return &this
 }
 
+func NewDeleteTransportRequest() *MailcowDeleteRequest {
+	this := MailcowDeleteRequest{}
+	this.endpoint = "/api/v1/delete/transport"
+	this.ResourceName = "resourceTransport"
+	return &this
+}
+
 func (o *MailcowDeleteRequest) GetItem() *string {
 	log.Print("[TRACE] GetItem")
 	if !o.HasItem() {
